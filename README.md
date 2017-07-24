@@ -1,15 +1,8 @@
 #README
-
-------------------------
-## SET-UP .GITIGNORE
-- [X] .gitignore added.
-- [ ] Run in terminal:  
-	git config --global core.excludesfile ~/.gitignore_global
-- [ ] Delete .gitignore section from README.md
-------------------------
+ 
 # Lambda Expression Calculator
 
-## Resouces
+## Resources
 - https://www.w3schools.com/jsref/dom_obj_number.asp
 
 
