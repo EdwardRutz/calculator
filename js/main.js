@@ -4,14 +4,17 @@ console.log("main.js active");
 let numIn1 = "";
 let numIn2 = "";
 let numOut1 = "";
-let numX = getElementById('numIn1');
-let numY = getElementById("numIn2");
+// let numX = getElementById('numIn1');
+// let numY = getElementById("numIn2");
 
 
-object.addEventListener("click", myScript);
-object.addEventListener("click", myScript);
-object.addEventListener("click", myScript);
-object.addEventListener("click", myScript);
+document.getElementById('addIn')
+	.addEventListener("click", function(){
+		add(numIn1, numIn2)
+	});
+// object.addEventListener("click", myScript);
+// object.addEventListener("click", myScript);
+// object.addEventListener("click", myScript);
 
 
 function calculate (x, y, func) {
@@ -21,6 +24,7 @@ function calculate (x, y, func) {
 function add(x,y) {
 	return x + y
 }
+	console.log("add", );
 
 function subtract(x, y) {
   return x - y
