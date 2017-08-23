@@ -1,50 +1,124 @@
 console.log("main.js active");
 
-/***********  SCRIPT  ***************/
-let numIn1 = "";
-let numIn2 = "";
-let numOut1 = "";
-// let numX = getElementById('numIn1');
-// let numY = getElementById("numIn2");
 
+//-------- EVENT LISTENERS ---------
 
-document.getElementById('addIn')
-	.addEventListener("click", function(){
-		add(numIn1, numIn2)
+var numberAdd = document.getElementById('addIn')
+	numberAdd.addEventListener("click", function() {
+
+		let x = document.getElementById('numIn1').value;
+		x = Number(x);
+
+		let y = document.getElementById("numIn2").value;
+		y = Number(y);
+
+		calculate(x, y, 'add');
 	});
-// object.addEventListener("click", myScript);
-// object.addEventListener("click", myScript);
-// object.addEventListener("click", myScript);
 
 
-function calculate (x, y, func) {
-	return func(numX, numY)
+var numberSub = document.getElementById('subtractIn')
+	numberSub.addEventListener("click", function() {
+
+		let x = document.getElementById('numIn1').value;
+		x = Number(x);
+
+		let y = document.getElementById("numIn2").value;
+		y = Number(y);
+
+		calculate(x, y, 'subtract');
+	});
+
+
+
+var numberMultiply = document.getElementById('multiplyIn')
+	numberMultiply.addEventListener("click", function() {
+
+		let x = document.getElementById('numIn1').value;
+		x = Number(x);
+
+		let y = document.getElementById("numIn2").value;
+		y = Number(y);
+
+		calculate(x, y,'multiply');
+	});
+
+
+
+
+var numberDiv = document.getElementById('divideIn')
+	numberDiv.addEventListener("click", function() {
+
+		let x = document.getElementById('numIn1').value;
+		x = Number(x);
+
+		let y = document.getElementById("numIn2").value;
+		y = Number(y);
+
+		calculate(x, y, 'divide');
+	});
+
+
+//-------- CALCULATION FUNCTONS ---------
+
+
+function add(x, y) {
+	var result = x + y;
+
+	var resultOut = document.getElementById("output");
+	resultOut.innerHTML = result;
 }
-
-function add(x,y) {
-	return x + y
-}
-	console.log("add", );
 
 function subtract(x, y) {
-  return x - y
+
+	var result = x - y;
+
+	var resultOut = document.getElementById("output");
+	resultOut.innerHTML = result;
 }
 
-function multipy(x, y) {
-  return x * y
+function multiply(x, y) {
+
+	var result = x * y;
+
+	var resultOut = document.getElementById("output");
+	resultOut.innerHTML = result;
 }
+
 function divide(x, y) {
-  return x / y
+
+	var result = x / y;
+
+	var resultOut = document.getElementById("output");
+	resultOut.innerHTML = result;
 }
 
 
 
+// Create a function that accepts three arguments.
+//     1. First number
+//     2. Second number
+//     3. A function that performs an operation on them
 
 
+function calculate(x, y, operation) {
 
-
-
-
+	switch(operation) {
+	    case "add":
+	        add(x, y);
+	        break;
+	    case "subtract":
+	        subtract(x, y);
+	        break;
+	    case "multiply":
+	        multiply(x, y);
+	        break;
+	    case "divide":
+	        divide(x, y);
+	        break;
+	    default:
+	        console.log("Error");
+	}
+}
 
 
 
