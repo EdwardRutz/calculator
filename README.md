@@ -2,10 +2,6 @@
  
 ## [X] Lambda Expression Calculator
 
-## Resources
-- https://www.w3schools.com/jsref/dom_obj_number.asp
-
-
 ## Requirements
 
 - [X] Create an HTML file that has two input fields to accept the two numbers to perform operations on.
@@ -22,3 +18,4 @@
 
 ## Sources
 - Demo: event-listeners-starter
+- https://www.w3schools.com/jsref/dom_obj_number.asp
